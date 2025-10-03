@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: dark)">
+
+    <!-- SEO Meta Tags -->
+    <title>Mes Projets Web - Onin Technologie</title>
+    <meta name="description" content="Découvrez tous mes projets web, applications et réalisations. Portfolio complet de mes créations digitales et solutions technologiques.">
+    <meta name="keywords" content="projets web, applications, portfolio, réalisations, développement web, sites web">
+    <meta name="author" content="Onin Technologie">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://onin-technologie.fr/projects.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mes Projets Web - Onin Technologie">
+    <meta property="og:description" content="Découvrez tous mes projets web, applications et réalisations. Portfolio complet de mes créations digitales.">
+    <meta property="og:url" content="http://onin-technologie.fr/projects.html">
+    <meta property="og:site_name" content="Onin Technologie">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="http://onin-technologie.fr/Pictures/Logo Onin.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Onin Technologie">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mes Projets Web - Onin Technologie">
+    <meta name="twitter:description" content="Découvrez tous mes projets web, applications et réalisations. Portfolio complet de mes créations digitales.">
+    <meta name="twitter:image" content="http://onin-technologie.fr/Pictures/Logo Onin.png">
+    <meta name="twitter:image:alt" content="Logo Onin Technologie">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Mes Projets Web",
+        "description": "Portfolio complet de mes projets web et applications",
+        "url": "http://onin-technologie.fr/projects.html",
+        "isPartOf": {
+            "@type": "Website",
+            "name": "Onin Technologie",
+            "url": "http://onin-technologie.fr"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "name": "Projets Web",
+            "description": "Collection de projets web et applications développés"
+        }
+    }
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/Pictures/Logo Onin.png">
+    <link rel="apple-touch-icon" href="/Pictures/Logo Onin.png">
+    <link rel="shortcut icon" href="/Pictures/Logo Onin.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Onin Technologie">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#1e40af">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Skip Link for Accessibility -->
+    <style>
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            position: fixed;
+            top: 8px;
+            left: 8px;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            background: #1e40af;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 9999;
+        }
+
+        /* Styles spécifiques à la page projets */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-24);
+            margin-top: var(--space-32);
+            max-width: 1600px;
+            margin-inline: auto;
+        }
+
+        .project-card {
+            background-color: var(--color-surface-elevated);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-colors), var(--transition-transform);
+            overflow: hidden;
+            height: fit-content;
+        }
+
+        .project-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+            border-color: var(--color-border-hover);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--color-primary-100), var(--color-primary-200));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: var(--font-size-3xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        [data-theme="dark"] .project-image {
+            background: linear-gradient(135deg, var(--color-primary-900), var(--color-primary-800));
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="20" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .project-content {
+            padding: var(--space-20);
+        }
+
+        .project-title {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            line-height: var(--line-height-tight);
+            margin-bottom: var(--space-8);
+            color: var(--color-text-primary);
+        }
+
+        .project-description {
+            font-size: var(--font-size-base);
+            line-height: var(--line-height-relaxed);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-16);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            margin-bottom: var(--space-16);
+        }
+
+        .project-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--space-2) var(--space-8);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-medium);
+            background-color: var(--color-primary-100);
+            color: var(--color-primary-800);
+            border-radius: var(--radius-full);
+            border: 1px solid var(--color-primary-200);
+        }
+
+        [data-theme="dark"] .project-tag {
+            background-color: var(--color-primary-900);
+            color: var(--color-primary-200);
+            border-color: var(--color-primary-800);
+        }
+
+        .project-links {
+            display: flex;
+            gap: var(--space-8);
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-6) var(--space-12);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            text-decoration: none;
+            border-radius: var(--radius-base);
+            transition: var(--transition-colors);
+            min-height: var(--space-20);
+        }
+
+        .project-link-primary {
+            background-color: var(--color-primary);
+            color: var(--color-text-inverse);
+        }
+
+        .project-link-primary:hover {
+            background-color: var(--color-primary-700);
+        }
+
+        .project-link-secondary {
+            background-color: var(--color-surface);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-border);
+        }
+
+        .project-link-secondary:hover {
+            background-color: var(--color-surface-elevated);
+            border-color: var(--color-border-hover);
+        }
+
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-8);
+        }
+
+        .status-indicator {
+            width: var(--space-4);
+            height: var(--space-4);
+            border-radius: var(--radius-full);
+        }
+
+        .status-live .status-indicator {
+            background-color: var(--color-success);
+        }
+
+        .status-development .status-indicator {
+            background-color: var(--color-warning);
+        }
+
+        .status-archive .status-indicator {
+            background-color: var(--color-text-muted);
+        }
+
+        .filter-section {
+            margin-bottom: var(--space-32);
+            text-align: center;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-8);
+            justify-content: center;
+            margin-top: var(--space-16);
+        }
+
+        .filter-btn {
+            padding: var(--space-6) var(--space-16);
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-medium);
+            background-color: var(--color-surface-elevated);
+            color: var(--color-text-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            transition: var(--transition-colors);
+            text-decoration: none;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--color-primary);
+            color: var(--color-text-inverse);
+            border-color: var(--color-primary);
+        }
+
+        /* Responsive styles for projects page */
+
+        /* Large screens optimizations for projects */
+        @media (min-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-32);
+                max-width: 1400px;
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-40);
+                max-width: 1600px;
+            }
+
+            .project-card {
+                padding: var(--space-24);
+            }
+        }
+
+        @media (min-width: 1920px) {
+            .projects-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: var(--space-48);
+                max-width: 1800px;
+            }
+
+            .project-card {
+                padding: var(--space-32);
+            }
+
+            .project-image {
+                height: 220px;
+            }
+        }
+
+        @media (min-width: 2560px) {
+            .projects-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: var(--space-64);
+                max-width: 2200px;
+            }
+
+            .project-card {
+                padding: var(--space-40);
+            }
+
+            .project-image {
+                height: 240px;
+            }
+        }
+
+        @media (max-width: 1199px) and (min-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-24);
+            }
+        }
+
+        @media (max-width: 1023px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-20);
+            }
+
+            .filter-buttons {
+                flex-wrap: wrap;
+                gap: var(--space-8);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-16);
+            }
+
+            .project-content {
+                padding: var(--space-16);
+            }
+
+            .project-links {
+                flex-direction: column;
+                gap: var(--space-8);
+            }
+
+            .project-link {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .filter-buttons {
+                gap: var(--space-6);
+                justify-content: center;
+            }
+
+            .filter-btn {
+                padding: var(--space-6) var(--space-12);
+                font-size: var(--font-size-xs);
+            }
+
+            .project-image {
+                height: 160px;
+            }
+
+            .project-title {
+                font-size: var(--font-size-lg);
+            }
+
+            .project-description {
+                font-size: var(--font-size-sm);
+            }
+        }
+
+        @media (max-width: 599px) {
+            .filter-section {
+                margin-bottom: var(--space-24);
+            }
+
+            .filter-buttons {
+                gap: var(--space-4);
+            }
+
+            .filter-btn {
+                padding: var(--space-4) var(--space-8);
+                font-size: var(--font-size-xs);
+            }
+
+            .project-content {
+                padding: var(--space-12);
+            }
+
+            .project-image {
+                height: 140px;
+            }
+
+            .project-title {
+                font-size: var(--font-size-base);
+                margin-bottom: var(--space-6);
+            }
+
+            .project-description {
+                font-size: var(--font-size-xs);
+                margin-bottom: var(--space-12);
+            }
+
+            .project-tags {
+                gap: var(--space-2);
+                margin-bottom: var(--space-12);
+            }
+
+            .project-tag {
+                padding: var(--space-1) var(--space-6);
+                font-size: 10px;
+            }
+
+            .project-link {
+                padding: var(--space-8) var(--space-12);
+                font-size: var(--font-size-xs);
+                min-height: var(--space-20);
+            }
+
+            .project-status {
+                font-size: 10px;
+                margin-bottom: var(--space-6);
+            }
+        }
+
+        @media (max-width: 479px) {
+            .projects-grid {
+                gap: var(--space-12);
+            }
+
+            .project-content {
+                padding: var(--space-8);
+            }
+
+            .project-image {
+                height: 120px;
+            }
+
+            .filter-buttons {
+                gap: var(--space-2);
+            }
+
+            .filter-btn {
+                padding: var(--space-2) var(--space-6);
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <!-- Theme Toggle Button -->
+    <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Basculer le mode sombre"
+        type="button"
+    >
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+        </svg>
+    </button>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-content">
+                <div class="logo">
+                    <a href="/">
+                        <img src="Pictures/Logo Onin.png" alt="Logo Onin Technologie" width="160" height="auto" loading="eager">
+                    </a>
+                </div>
+
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb" aria-label="Fil d'Ariane">
+                    <li><a href="/">Accueil</a></li>
+                    <li aria-hidden="true">/</li>
+                    <li><a href="./projects.html" aria-current="page">Projets</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+            <!-- Page Header -->
+            <header class="hero-section">
+                <div class="hero-header">
+                    <h1 class="hero-title">
+                        Mes <span class="accent-text">Projets Web</span>
+                    </h1>
+                    <p class="hero-description">
+                        Découvrez mes réalisations digitales, applications web et projets créatifs.
+                        Chaque projet reflète ma passion pour les technologies modernes et l'innovation.
+                    </p>
+                </div>
+            </header>
+
+            <!-- Filter Section -->
+            <section class="filter-section" aria-labelledby="filter-title">
+                <h2 id="filter-title" class="sr-only">Filtrer les projets</h2>
+                <p class="filter-description">Filtrer par type de projet :</p>
+                <div class="filter-buttons" role="group" aria-label="Filtres de projets">
+                    <button class="filter-btn active" data-filter="all" type="button">Tous</button>
+                    <button class="filter-btn" data-filter="website" type="button">Sites Web</button>
+                    <button class="filter-btn" data-filter="app" type="button">Applications</button>
+                    <button class="filter-btn" data-filter="tool" type="button">Outils</button>
+                    <button class="filter-btn" data-filter="experiment" type="button">Expérimentations</button>
+                </div>
+            </section>
+
+            <!-- Projects Grid -->
+            <section class="projects-section" aria-labelledby="projects-title">
+                <h2 id="projects-title" class="sr-only">Liste des projets</h2>
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Chez Hugon - Bouchon Lyonnais -->
+                    <article class="project-card" data-category="website" data-status="development">
+                        <div class="project-image" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 6h-8l-2-2H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-2.06 11L15 15.28 12.06 17l.78-3.33-2.59-2.24 3.41-.29L15 8l1.34 3.14 3.41.29-2.59 2.24L18.94 17z"/>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-status status-development">
+                                <span class="status-indicator" aria-hidden="true"></span>
+                                <span>En développement</span>
+                            </div>
+                            <h3 class="project-title">Chez Hugon - Bouchon Lyonnais</h3>
+                            <p class="project-description">
+                                Site vitrine pour un authentique bouchon lyonnais établi depuis 1937. Design vintage mettant en valeur l'héritage familial et la cuisine traditionnelle lyonnaise.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                                <span class="project-tag">Responsive</span>
+                                <span class="project-tag">SEO</span>
+                                <span class="project-tag">Patrimoine</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://onin-technologie.github.io/Chez_Hugon/" class="project-link project-link-primary" rel="noopener" target="_blank" aria-describedby="external-link-desc">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                                    </svg>
+                                    Voir le site
+                                </a>
+                                <a href="https://github.com/onin-technologie/Chez_Hugon" class="project-link project-link-secondary" rel="noopener" target="_blank">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 3a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                    Code source
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Les Adrets Lyon - Bouchon Lyonnais -->
+                    <article class="project-card" data-category="website" data-status="development">
+                        <div class="project-image" aria-hidden="true">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-status status-development">
+                                <span class="status-indicator" aria-hidden="true"></span>
+                                <span>En développement</span>
+                            </div>
+                            <h3 class="project-title">Les Adrets Lyon - Bouchon Renaissance</h3>
+                            <p class="project-description">
+                                Site élégant pour un authentique bouchon lyonnais situé dans un bâtiment Renaissance du Vieux Lyon (UNESCO). Cuisine traditionnelle du Chef Guillaume Riva.
+                            </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                                <span class="project-tag">Responsive</span>
+                                <span class="project-tag">UNESCO</span>
+                                <span class="project-tag">Gastronomie</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://onin-technologie.github.io/Les-Adrets-Lyon/index.html" class="project-link project-link-primary" rel="noopener" target="_blank" aria-describedby="external-link-desc">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                                    </svg>
+                                    Voir le site
+                                </a>
+                                <a href="https://github.com/onin-technologie/Les-Adrets-Lyon" class="project-link project-link-secondary" rel="noopener" target="_blank">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 3a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                    </svg>
+                                    Code source
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Back to Home -->
+            <section class="cta-section">
+                <a href="/" class="btn btn-secondary">
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+                    </svg>
+                    Retour à l'accueil
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Onin Technologie</h3>
+                    <p class="footer-description">Développeur web passionné, créateur de solutions digitales modernes et performantes.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <nav class="footer-nav" aria-label="Navigation secondaire">
+                        <ul class="footer-links">
+                            <li><a href="/">Accueil</a></li>
+                            <li><a href="./projects.html">Projets</a></li>
+                            <li><a href="https://ninoblz.github.io/Portfolio/index.html" rel="noopener" target="_blank">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Légal</h4>
+                    <nav class="footer-nav" aria-label="Informations légales">
+                        <ul class="footer-links">
+                            <li><a href="/mentions-legales.html">Mentions légales</a></li>
+                            <li><a href="/politique-confidentialite.html">Politique de confidentialité</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Onin Technologie. Tous droits réservés.</p>
+                <p class="footer-made-with">
+                    Fait avec <span aria-label="amour" role="img">❤️</span> et les meilleures pratiques web
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <span id="external-link-desc" class="sr-only">Ouvre le lien dans un nouvel onglet</span>
+
+    <!-- JavaScript -->
+    <script>
+        // Update current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Get saved theme or use system preference
+        const currentTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
+
+        // Apply theme
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+
+            // Update button aria-label
+            const isLight = theme === 'light';
+            themeToggle.setAttribute('aria-label', isLight ? 'Activer le mode sombre' : 'Activer le mode clair');
+        }
+
+        // Initialize theme
+        setTheme(currentTheme);
+
+        // Theme toggle event
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Listen for system theme changes
+        prefersDark.addListener((e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filter = button.dataset.filter;
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        card.setAttribute('aria-hidden', 'false');
+                    } else {
+                        card.style.display = 'none';
+                        card.setAttribute('aria-hidden', 'true');
+                    }
+                });
+
+                // Announce filter change to screen readers
+                const activeCount = document.querySelectorAll('.project-card:not([aria-hidden="true"])').length;
+                const message = `${activeCount} projet${activeCount > 1 ? 's' : ''} affiché${activeCount > 1 ? 's' : ''}`;
+
+                // Create temporary announcement element
+                const announcement = document.createElement('div');
+                announcement.setAttribute('aria-live', 'polite');
+                announcement.setAttribute('aria-atomic', 'true');
+                announcement.className = 'sr-only';
+                announcement.textContent = message;
+                document.body.appendChild(announcement);
+
+                setTimeout(() => {
+                    document.body.removeChild(announcement);
+                }, 1000);
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Focus management for skip link
+        document.querySelector('.skip-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.focus();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
+        // Lazy loading for project images (if we had real images)
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Load image here if we had real images
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            document.querySelectorAll('.project-image').forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(registrationError => console.log('SW registration failed'));
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+# Robots.txt pour Onin Technologie
+# http://onin-technologie.fr/robots.txt
+
+User-agent: *
+Allow: /
+
+# Fichiers et dossiers à exclure de l'indexation
+Disallow: /sw.js
+Disallow: /manifest.json
+Disallow: /*.json$
+Disallow: /CLAUDE.md
+
+# Autoriser spécifiquement les ressources importantes
+Allow: /Pictures/
+Allow: /styles.css
+Allow: /index.html
+Allow: /projects.html
+
+# Sitemap
+Sitemap: http://onin-technologie.fr/sitemap.xml
+
+# Délai entre les requêtes (en secondes)
+Crawl-delay: 1
+
+# Spécifique à Google
+User-agent: Googlebot
+Allow: /
+
+# Spécifique à Bing
+User-agent: Bingbot
+Allow: /
+
+# Spécifique aux réseaux sociaux
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Exclure les bots malveillants
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Page d'accueil -->
+  <url>
+    <loc>http://onin-technologie.fr/</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>http://onin-technologie.fr/Pictures/Logo Onin.png</image:loc>
+      <image:title>Logo Onin Technologie</image:title>
+      <image:caption>Logo de l'entreprise Onin Technologie - Développeur web</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Page des projets -->
+  <url>
+    <loc>http://onin-technologie.fr/projects.html</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Page de redirection QR -->
+  <url>
+    <loc>http://onin-technologie.fr/qr.html</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Pages légales (à créer si nécessaire) -->
+  <url>
+    <loc>http://onin-technologie.fr/mentions-legales.html</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>http://onin-technologie.fr/politique-confidentialite.html</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+</urlset>

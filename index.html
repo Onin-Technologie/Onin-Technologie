@@ -1,36 +1,343 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Onin Technologie - Site en construction</title>
+    <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: dark)">
+
+    <!-- SEO Meta Tags -->
+    <title>Onin Technologie - Développeur Web & Solutions Digitales</title>
+    <meta name="description" content="Découvrez mes projets de développement web, applications modernes et solutions digitales. Portfolio et réalisations créatives.">
+    <meta name="keywords" content="développement web, portfolio, projets web, solutions digitales, développeur">
+    <meta name="author" content="Onin Technologie">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://onin-technologie.fr/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Onin Technologie - Développeur Web & Solutions Digitales">
+    <meta property="og:description" content="Découvrez mes projets de développement web, applications modernes et solutions digitales.">
+    <meta property="og:url" content="http://onin-technologie.fr/">
+    <meta property="og:site_name" content="Onin Technologie">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:image" content="http://onin-technologie.fr/Pictures/Logo Onin.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo Onin Technologie">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Onin Technologie - Développeur Web & Solutions Digitales">
+    <meta name="twitter:description" content="Découvrez mes projets de développement web, applications modernes et solutions digitales.">
+    <meta name="twitter:image" content="http://onin-technologie.fr/Pictures/Logo Onin.png">
+    <meta name="twitter:image:alt" content="Logo Onin Technologie">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Onin Technologie",
+        "url": "http://onin-technologie.fr",
+        "logo": "http://onin-technologie.fr/Pictures/Logo Onin.png",
+        "description": "Développeur web spécialisé dans les solutions digitales modernes",
+        "sameAs": []
+    }
+    </script>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="/Pictures/Logo Onin.png">
+    <link rel="apple-touch-icon" href="/Pictures/Logo Onin.png">
+    <link rel="shortcut icon" href="/Pictures/Logo Onin.png">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Onin Technologie">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#1e40af">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+
+    <!-- Performance Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Skip Link for Accessibility -->
+    <style>
+        .skip-link {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip-link:focus {
+            position: fixed;
+            top: 8px;
+            left: 8px;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            background: #1e40af;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            z-index: 9999;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="Pictures/Logo Onin.png" alt="Logo Onin Technologie">
-            </div>
-        </header>
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-        <main>
-            <div class="construction-section">
-                <div class="construction-icon">
-                    <img src="Pictures/icon construction.png" alt="Site en construction">
+    <!-- Theme Toggle Button -->
+    <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Basculer le mode sombre"
+        type="button"
+    >
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" />
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+        </svg>
+    </button>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="Pictures/Logo Onin.png" alt="Logo Onin Technologie" width="160" height="auto" loading="eager">
                 </div>
-                <h1>Site en construction</h1>
-                <p>Notre nouveau site web est actuellement en développement.</p>
-                <p>Nous travaillons dur pour vous offrir la meilleure expérience possible.</p>
-                <div class="coming-soon">
-                    <p>Revenez bientôt !</p>
+
+                <!-- Breadcrumb -->
+                <ol class="breadcrumb" aria-label="Fil d'Ariane">
+                    <li><a href="/" aria-current="page">Accueil</a></li>
+                </ol>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="main-content" class="main-content" role="main">
+            <div class="hero-section">
+                <header class="hero-header">
+                    <h1 class="hero-title">
+                        Développeur Web &
+                        <span class="accent-text">Solutions Digitales</span>
+                    </h1>
+                    <p class="hero-description">
+                        Créateur d'expériences numériques modernes et performantes.
+                        Découvrez mon travail et mes réalisations.
+                    </p>
+                </header>
+
+                <div class="cta-section" role="group" aria-labelledby="cta-title">
+                    <h2 id="cta-title" class="sr-only">Actions principales</h2>
+
+                    <a
+                        href="https://ninoblz.github.io/Portfolio/index.html"
+                        class="btn btn-primary"
+                        role="button"
+                        aria-describedby="portfolio-desc"
+                        rel="noopener"
+                        target="_blank"
+                    >
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2H4zm2 3a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                        </svg>
+                        Voir Mon Portfolio
+                        <svg class="external-icon" width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z" clip-rule="evenodd" />
+                            <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <span id="portfolio-desc" class="sr-only">Ouvre mon portfolio dans un nouvel onglet</span>
+
+                    <a
+                        href="./projects.html"
+                        class="btn btn-secondary"
+                        role="button"
+                        aria-describedby="projects-desc"
+                    >
+                        <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h4a1 1 0 011 1v2a1 1 0 01-1 1h-4a1 1 0 01-1-1v-2z" clip-rule="evenodd" />
+                        </svg>
+                        Mes Projets Web
+                    </a>
+                    <span id="projects-desc" class="sr-only">Voir tous mes projets et réalisations web</span>
                 </div>
             </div>
+
+            <!-- Features Section -->
+            <section class="features-section" aria-labelledby="features-title">
+                <h2 id="features-title" class="features-title">Expertise & Savoir-faire</h2>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M14.25 2.1l-.1-.1a2 2 0 0 0-2.8 0l-.1.1L9.75 3.6a2 2 0 0 1-1.4.6H6a2 2 0 0 0-2 2v2.35a2 2 0 0 1-.6 1.4L1.9 11.35a2 2 0 0 0 0 2.8l1.5 1.45a2 2 0 0 1 .6 1.4V19a2 2 0 0 0 2 2h2.35a2 2 0 0 1 1.4.6l1.45 1.5a2 2 0 0 0 2.8 0l1.45-1.5a2 2 0 0 1 1.4-.6H19a2 2 0 0 0 2-2v-2.35a2 2 0 0 1 .6-1.4l1.5-1.45a2 2 0 0 0 0-2.8L21.6 9.75a2 2 0 0 1-.6-1.4V6a2 2 0 0 0-2-2h-2.35a2 2 0 0 1-1.4-.6L14.25 2.1zM16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Développement Modern</h3>
+                        <p class="feature-description">Technologies récentes et bonnes pratiques pour des applications performantes et évolutives.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.29 16.29L5.7 12.7a.996.996 0 111.41-1.41L10 14.17l6.88-6.88a.996.996 0 111.41 1.41l-7.59 7.59a.996.996 0 01-1.41 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Qualité & Accessibilité</h3>
+                        <p class="feature-description">Respect des standards WCAG et RGAA pour une expérience inclusive et accessible à tous.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">SEO & GEO</h3>
+                        <p class="feature-description">Optimisation pour moteurs de recherche classiques et moteurs génératifs (ChatGPT, Bard) pour une visibilité maximale.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Performance Optimisée</h3>
+                        <p class="feature-description">Sites rapides et optimisés pour tous les appareils avec les meilleures pratiques de performance.</p>
+                    </article>
+                </div>
+            </section>
         </main>
 
-        <footer>
-            <p>&copy; 2024 Onin Technologie. Tous droits réservés.</p>
+        <!-- Footer -->
+        <footer class="main-footer" role="contentinfo">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Onin Technologie</h3>
+                    <p class="footer-description">Développeur web passionné, créateur de solutions digitales modernes et performantes.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navigation</h4>
+                    <nav class="footer-nav" aria-label="Navigation secondaire">
+                        <ul class="footer-links">
+                            <li><a href="/">Accueil</a></li>
+                            <li><a href="/projects.html">Projets</a></li>
+                            <li><a href="https://ninoblz.github.io/Portfolio/index.html" rel="noopener" target="_blank">Portfolio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Légal</h4>
+                    <nav class="footer-nav" aria-label="Informations légales">
+                        <ul class="footer-links">
+                            <li><a href="/mentions-legales.html">Mentions légales</a></li>
+                            <li><a href="/politique-confidentialite.html">Politique de confidentialité</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2024</span> Onin Technologie. Tous droits réservés.</p>
+                <p class="footer-made-with">
+                    Fait avec <span aria-label="amour" role="img">❤️</span> et les meilleures pratiques web
+                </p>
+            </div>
         </footer>
     </div>
+
+    <!-- JavaScript for Theme Toggle and Year Update -->
+    <script>
+        // Update current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+        // Get saved theme or use system preference
+        const currentTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
+
+        // Apply theme
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+
+            // Update button aria-label
+            const isLight = theme === 'light';
+            themeToggle.setAttribute('aria-label', isLight ? 'Activer le mode sombre' : 'Activer le mode clair');
+        }
+
+        // Initialize theme
+        setTheme(currentTheme);
+
+        // Theme toggle event
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // Listen for system theme changes
+        prefersDark.addListener((e) => {
+            if (!localStorage.getItem('theme')) {
+                setTheme(e.matches ? 'dark' : 'light');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Focus management for skip link
+        document.querySelector('.skip-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.focus();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('SW registered'))
+                    .catch(registrationError => console.log('SW registration failed'));
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="/Pictures/Logo Onin.png"/>
+            <square310x310logo src="/Pictures/Logo Onin.png"/>
+            <wide310x150logo src="/Pictures/Logo Onin.png"/>
+            <TileColor>#1e40af</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
