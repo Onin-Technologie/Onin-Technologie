@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nino Beluze — Développeur logiciel Python freelance</title>
+  <meta name="description" content="Nino Beluze — Développeur logiciel freelance : applications Python, automatisation, outils métier, data et systèmes embarqués. Basé à Lyon, disponible en remote." />
+
+  <meta property="og:title" content="Nino Beluze — Développeur logiciel Python freelance" />
+  <meta property="og:description" content="Développeur logiciel freelance : Python, automatisation, outils métier, data et embarqué. Basé à Lyon." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232563EB'/><text x='50' y='68' font-size='54' font-family='monospace' font-weight='700' text-anchor='middle' fill='%23FFFFFF'>NB</text></svg>" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#hero" aria-label="Accueil">
+        <span class="nav__brand-mark">NB</span>
+        <span class="nav__brand-name">Nino&nbsp;Beluze</span>
+      </a>
+      <nav class="nav__links" aria-label="Navigation principale">
+        <a href="#services">Services</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#competences">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn--primary nav__cta" href="#contact">Me contacter</a>
+      <button class="nav__burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileMenu" hidden>
+      <a href="#services">Services</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#competences">Compétences</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn--primary" href="#contact">Me contacter</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+        <p class="hero__eyebrow reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          Disponible pour missions freelance
+        </p>
+        <h1 class="hero__title reveal">
+          Développeur <span class="accent">logiciel</span><br />
+          Python &amp; <span class="accent">automatisation</span>
+        </h1>
+
+        <div class="trust reveal" aria-label="Ils m'ont fait confiance">
+          <p class="trust__label">Ils m'ont fait confiance</p>
+          <div class="trust__viewport">
+            <div class="trust__track">
+              <span class="trust__logo"><img src="assets/logos/stmicroelectronics.png" alt="STMicroelectronics" data-name="STMicroelectronics" /></span>
+              <span class="trust__logo"><img src="assets/logos/edf.png" alt="EDF" data-name="EDF" /></span>
+              <span class="trust__logo"><img src="assets/logos/inria.png" alt="Inria" data-name="Inria" /></span>
+              <span class="trust__logo"><img src="assets/logos/cpe-lyon.png" alt="CPE Lyon" data-name="CPE Lyon" /></span>
+              <span class="trust__logo"><img src="assets/logos/idiotslab.png" alt="IDIoTsLab" data-name="IDIoTsLab" /></span>
+              <span class="trust__logo" aria-hidden="true"><img src="assets/logos/stmicroelectronics.png" alt="" data-name="STMicroelectronics" /></span>
+              <span class="trust__logo" aria-hidden="true"><img src="assets/logos/edf.png" alt="" data-name="EDF" /></span>
+              <span class="trust__logo" aria-hidden="true"><img src="assets/logos/inria.png" alt="" data-name="Inria" /></span>
+              <span class="trust__logo" aria-hidden="true"><img src="assets/logos/cpe-lyon.png" alt="" data-name="CPE Lyon" /></span>
+              <span class="trust__logo" aria-hidden="true"><img src="assets/logos/idiotslab.png" alt="" data-name="IDIoTsLab" /></span>
+            </div>
+          </div>
+        </div>
+        <p class="hero__lead reveal">
+          Je conçois des applications, des outils métier et des solutions
+          d'automatisation sur mesure — du back-office qui fait gagner des heures
+          à l'app mobile et à l'embarqué piloté par logiciel. Polyvalent sur
+          plusieurs langages (Python, JavaScript, C++, C#), je choisis la techno
+          adaptée à chaque projet. Passé par STMicroelectronics, EDF et la
+          robotique de compétition.
+        </p>
+        <div class="hero__actions reveal">
+          <a class="btn btn--primary" href="#contact">Démarrer un projet</a>
+          <a class="btn btn--ghost" href="#parcours">Voir mon parcours</a>
+        </div>
+        <dl class="hero__stats reveal">
+          <div class="stat">
+            <dt>Stack</dt>
+            <dd>Python · JavaScript · React Native · C++ · C# · HTML/CSS</dd>
+          </div>
+          <div class="stat">
+            <dt>Localisation</dt>
+            <dd>Lyon · Remote</dd>
+          </div>
+        </dl>
+        </div>
+
+        <div class="hero__media reveal">
+          <div class="hero__photo-wrap">
+            <img src="assets/me.png" alt="Portrait de Nino Beluze, développeur freelance" class="hero__photo" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__tag">// Services</span>
+          <h2 class="section__title">Ce que je peux construire pour vous</h2>
+          <p class="section__sub">Une double compétence rare : je code le logiciel <em>et</em> je maîtrise le matériel qui l'exécute.</p>
+        </header>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="card__title">Développement Python</h3>
+            <p class="card__text">Applications, scripts d'automatisation et back-office sur mesure. Du besoin métier au logiciel fiable, testé et maintenable.</p>
+            <ul class="card__tags"><li>Python</li><li>Automatisation</li><li>API</li></ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2.5"/><line x1="10" y1="18" x2="14" y2="18"/></svg>
+            </div>
+            <h3 class="card__title">Applications mobiles iOS &amp; Android</h3>
+            <p class="card__text">Applications cross-platform en React Native, déployées sur iOS et Android depuis une seule base de code. Front mobile, API back-end et base de données — un système complet, du prototype au store.</p>
+            <ul class="card__tags"><li>React Native</li><li>iOS · Android</li><li>Back-end &amp; BDD</li></ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3 class="card__title">Outils métier &amp; digitalisation</h3>
+            <p class="card__text">Interfaces internes, tableaux de bord et digitalisation de modes opératoires — comme pour EDF. Je transforme un process manuel en outil logiciel.</p>
+            <ul class="card__tags"><li>Dashboards</li><li>Workflow</li><li>UI</li></ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
+            </div>
+            <h3 class="card__title">Data &amp; traitement</h3>
+            <p class="card__text">Collecte, nettoyage et exploitation de données. Scripts de traitement, automatisation de rapports et fiabilisation des chaînes de données.</p>
+            <ul class="card__tags"><li>Data</li><li>Scripting</li><li>Reporting</li></ul>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <h3 class="card__title">Systèmes embarqués &amp; IoT</h3>
+            <p class="card__text">Firmware et IHM sur ESP32 / M5Stack, protocoles de communication (OneWire). La compétence logicielle qui sait aussi parler au matériel.</p>
+            <ul class="card__tags"><li>ESP32</li><li>Firmware</li><li>IHM</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS / TIMELINE -->
+    <section class="section section--alt" id="parcours">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__tag">// Parcours</span>
+          <h2 class="section__title">Une expérience terrain, pas que théorique</h2>
+          <p class="section__sub">Grands groupes industriels, robotique de compétition internationale et projets concrets.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">Depuis jan. 2026</span><span class="timeline__tag tag--accent">En cours</span><span class="timeline__tag">CPE Lyon · Bénévolat</span></div>
+              <h3 class="timeline__role">Projet bénévole — Interface IA embarquée</h3>
+              <p class="timeline__org">CPE Lyon</p>
+              <p class="timeline__desc">Conception d'une interface d'intelligence artificielle combinant des écrans multilatéraux, une caméra 360° et un Asus GX10 (NPU dédié au calcul IA) pour du traitement et de la vision par ordinateur en local (edge AI). Conception et modélisation 3D du dispositif.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">Déc. 2025 – Jan. 2026</span><span class="timeline__tag">CPE Lyon · Encadrement</span></div>
+              <h3 class="timeline__role">Encadrant technique — Projet de fin d'année robotique</h3>
+              <p class="timeline__org">CPE Lyon — Ingénieurs 5ᵉ année</p>
+              <p class="timeline__desc">Accompagnement d'une équipe d'ingénieurs de 5ᵉ année sur le prototypage de leur projet de fin d'année en robotique : support au développement ROS, IA, web et Python, à l'impression 3D et à la mécatronique.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2025</span><span class="timeline__tag tag--accent">Freelance</span></div>
+              <h3 class="timeline__role">Développeur freelance</h3>
+              <p class="timeline__org">Onin-Technologie</p>
+              <p class="timeline__desc">Développement Python et électronique pour des clients exigeants.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2025</span><span class="timeline__tag">CDD · Grenoble</span></div>
+              <h3 class="timeline__role">Technicien de validation fonctionnelle</h3>
+              <p class="timeline__org">Elsys Design — pour STMicroelectronics</p>
+              <p class="timeline__desc">Développement d'une application web de gestion du parc informatique des bancs de test en laboratoire. Validation fonctionnelle de composants au sein d'un leader mondial du semi-conducteur.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2024 – 2025</span><span class="timeline__tag">CDI · Lyon &amp; Grenoble</span></div>
+              <h3 class="timeline__role">Technicien d'étude — Data &amp; développement</h3>
+              <p class="timeline__org">LGM — pour EDF</p>
+              <p class="timeline__desc">Développement d'une application de création et de gestion des modes opératoires de maintenance. Développement Python et digitalisation des process pour un acteur majeur de l'énergie.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2024</span><span class="timeline__tag">RoboCup · Eindhoven</span></div>
+              <h3 class="timeline__role">Développeur robotique &amp; mécatronique — Équipe Lyontech</h3>
+              <p class="timeline__org">CPE Lyon — RoboCup 2024, ligue @Home</p>
+              <p class="timeline__desc">Robot d'assistance à domicile engagé en compétition internationale de robotique : développement de briques logicielles robotiques sous ROS, intégration, modélisation et fabrication 3D.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2024</span><span class="timeline__tag">Projet BTS</span></div>
+              <h3 class="timeline__role">Reprogrammateur d'EEPROM</h3>
+              <p class="timeline__org">Partenariat ADLC pour TCL</p>
+              <p class="timeline__desc">Création d'IHM et d'un protocole de communication via OneWire sur M5Stack (base ESP32). Gestion de projet en groupe.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">2023</span><span class="timeline__tag">RoboCup · Bordeaux</span></div>
+              <h3 class="timeline__role">Stagiaire robotique — Équipe Lyontech</h3>
+              <p class="timeline__org">CPE Lyon — RoboCup 2023, ligue @Home</p>
+              <p class="timeline__desc">Travail sur un robot destiné à la recherche en aide à domicile : développement robotique et IA sous ROS (Robot Operating System), mécanique et électronique.</p>
+            </div>
+          </li>
+
+          <li class="timeline__item reveal">
+            <div class="timeline__dot" aria-hidden="true"></div>
+            <div class="timeline__card">
+              <div class="timeline__meta"><span class="timeline__date">Depuis 2020</span><span class="timeline__tag">Bénévolat &amp; entrepreneuriat</span></div>
+              <h3 class="timeline__role">Bénévole &amp; réparateur — IDIoTsLab</h3>
+              <p class="timeline__org">FabLab</p>
+              <p class="timeline__desc">Entrepreneuriat de réparation de téléphones et accompagnement de la communauté maker.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section class="section" id="competences">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__tag">// Compétences</span>
+          <h2 class="section__title">Boîte à outils</h2>
+        </header>
+
+        <div class="skills">
+          <div class="skills__group reveal">
+            <h3 class="skills__label">Développement</h3>
+            <ul class="chips">
+              <li>Python</li><li>JavaScript</li><li>React Native</li><li>C++</li><li>C#</li><li>HTML / CSS</li><li>ROS</li><li>Git</li><li>API REST</li><li>Bases de données</li><li>Jenkins</li><li>Intelligence artificielle</li><li>Vision par ordinateur</li><li>Edge AI / NPU</li>
+            </ul>
+          </div>
+          <div class="skills__group reveal">
+            <h3 class="skills__label">Systèmes &amp; réseaux</h3>
+            <ul class="chips">
+              <li>Réseaux (Cisco CCNAv7)</li><li>Linux</li><li>Virtualisation</li><li>Docker</li><li>Dépannage informatique</li>
+            </ul>
+          </div>
+          <div class="skills__group reveal">
+            <h3 class="skills__label">Électronique &amp; matériel</h3>
+            <ul class="chips">
+              <li>ESP32 / M5Stack</li><li>Microcontrôleurs</li><li>Mécatronique</li><li>Capteurs &amp; IHM</li><li>Modélisation &amp; impression 3D</li><li>Réparation électronique</li><li>Réparation smartphone</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="edu reveal">
+          <h3 class="edu__title">Formation</h3>
+          <div class="edu__grid">
+            <div class="edu__item">
+              <span class="edu__date">2022 – 2024</span>
+              <p class="edu__deg">BTS Systèmes Numériques — Informatique &amp; Réseaux</p>
+              <p class="edu__school">Lycée Édouard Branly, Lyon · Certification Cisco CCNAv7</p>
+            </div>
+            <div class="edu__item">
+              <span class="edu__date">2020 – 2022</span>
+              <p class="edu__deg">BAC STI2D — option SIN</p>
+              <p class="edu__school">Lycée Carnot, Roanne · Systèmes d'Information &amp; Numériques</p>
+            </div>
+            <div class="edu__item">
+              <span class="edu__date">Langues</span>
+              <p class="edu__deg">Français — natif · Anglais — B2</p>
+              <p class="edu__school">À l'aise en environnement technique international</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="container contact__inner reveal">
+        <span class="section__tag">// Contact</span>
+        <h2 class="contact__title">Un projet en tête ?<br />Parlons-en.</h2>
+        <p class="contact__sub">Disponible pour des missions freelance en développement logiciel Python, automatisation et outils métier. Écrivez-moi sur LinkedIn, je réponds vite.</p>
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="https://linkedin.com/in/ninobeluze" target="_blank" rel="noopener">Me contacter sur LinkedIn</a>
+        </div>
+        <div class="contact__links">
+          <a href="https://github.com/NinoBlz" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5Z"/></svg>
+            <span>github.com/NinoBlz</span>
+          </a>
+          <a href="https://linkedin.com/in/ninobeluze" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33 0-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.74v20.51C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.74C24 .78 23.2 0 22.22 0Z"/></svg>
+            <span>in/ninobeluze</span>
+          </a>
+          <span class="contact__chip" aria-label="Localisation">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Lyon · Remote</span>
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year">2026</span> Nino Beluze — Développeur freelance</p>
+      <p class="footer__note">Conçu &amp; codé sur mesure</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
