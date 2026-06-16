@@ -49,6 +49,38 @@ document.querySelectorAll('.trust__logo img').forEach((img) => {
   if (img.complete && img.naturalWidth === 0) toText();
 });
 
+// Modals (native <dialog>): open via [data-modal], close via [data-close], backdrop click & ESC
+document.querySelectorAll('[data-modal]').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const dlg = document.getElementById(btn.dataset.modal);
+    if (dlg && typeof dlg.showModal === 'function') {
+      dlg.showModal();
+      document.body.style.overflow = 'hidden';
+    }
+  });
+});
+document.querySelectorAll('dialog.modal').forEach((dlg) => {
+  const close = () => dlg.close();
+  dlg.querySelectorAll('[data-close]').forEach((b) => b.addEventListener('click', close));
+  // Click on the backdrop (outside the card) closes
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+  dlg.addEventListener('close', () => { document.body.style.overflow = ''; });
+});
+
+// Modal 3D gallery: show a placeholder when a photo is missing
+document.querySelectorAll('.modal__shot img').forEach((img) => {
+  const toPlaceholder = () => {
+    const ph = document.createElement('div');
+    ph.className = 'modal__shot-ph';
+    ph.innerHTML =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>' +
+      '<span>' + (img.dataset.ph || 'Photo à venir') + '</span>';
+    img.replaceWith(ph);
+  };
+  img.addEventListener('error', toPlaceholder);
+  if (img.complete && img.naturalWidth === 0) toPlaceholder();
+});
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
